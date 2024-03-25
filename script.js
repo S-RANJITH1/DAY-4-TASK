@@ -216,3 +216,74 @@ var rotatedArray6 = (function (arr, k) {
   return arr.slice(-k).concat(arr.slice(0, arr.length - k));
 })(originalArray6, k);
 console.log(rotatedArray6);
+
+
+
+ // Question 2
+ // Do the below programs in arrow functions
+
+  // a.Print odd numbers in an array
+
+  var numberArray7 = [11, 15, 26, 47, 39, 28, 56, 84];
+       numberArray7.forEach(num => {
+           if (num % 2 !== 0) {
+               console.log(num);
+           }
+       });   
+
+
+//b.Convert all the strings to title caps in a string array
+
+var stringArray7 = ["task four", "guvi geek", "website development", "mobile"];
+var toTitleCase1 = str => {
+return str
+ .split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
+};
+
+var titleCaseArray7 = stringArray7.map(toTitleCase1);
+
+console.log(titleCaseArray7);
+
+
+//c.Sum of all numbers in an array
+
+var numberArray8 = [1, 2, 3, 4, 5, 6, 7, 8];
+
+var sum = numberArray8.reduce((total, num) => total + num, 0);
+
+console.log(sum);
+
+
+ //d.Return all the prime numbers in an array
+
+ var numberArray9= [5, 8, 9, 43, 15, 17, 53];
+ var isPrime = num => {
+ if (num <= 1) return false;
+ if (num <= 3) return true;
+
+ if (num % 2 === 0 || num % 3 === 0) return false;
+
+ for (let i = 5; i * i <= num; i += 6) {
+  if (num % i === 0 || num % (i + 2) === 0) return false;
+}
+return true;
+};
+
+var primeNumbers2 = numberArray9.filter(isPrime);
+
+console.log(primeNumbers2); 
+
+
+//e.Return all the palindromes in an array
+
+var stringArray9 = ["love", "hunter", "amma", "welcome", "guvi", "geek", "appa"];
+
+var Palindrome9 = str => {
+str = str.toLowerCase(); 
+var reversedStr9 = str.split("").reverse().join("");
+return str === reversedStr9;
+};
+
+var palindromeStrings9 = stringArray9.filter(Palindrome9);
+
+console.log(palindromeStrings9);
