@@ -276,7 +276,6 @@ var stringArray9 = [
   "love",
   "hunter",
   "amma",
-  "welcome",
   "guvi",
   "geek",
   "appa",
